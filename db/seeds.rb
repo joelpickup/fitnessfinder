@@ -32,10 +32,10 @@ Lesson.create!(name:"Water Aerobics", description:"not just for pregnant / old p
 Lesson.create!(name:"Cross Fit", description:"forging elite fitness!", price: 15, instructor_id: 3, duration: 30)
 Lesson.create!(name:"Pilates", description:"sort of like yoga but not", price: 30, instructor_id: 4, duration: 60)
 
-Booking.create(lesson_id:"1", start_time:"", status:"unapproved", instructor_id:"2", client_id:"6")
-Booking.create(lesson_id:"2", start_time:"", status:"unapproved", instructor_id:"1", client_id:"9")
-Booking.create(lesson_id:"3", start_time:"", status:"unapproved", instructor_id:"3", client_id:"10")
-Booking.create(lesson_id:"4", start_time:"", status:"unapproved", instructor_id:"4", client_id:"11")
+Booking.create!(lesson_id:"1", start_time:"", status:"unapproved", instructor_id:"2", client_id:"6")
+Booking.create!(lesson_id:"2", start_time:"", status:"unapproved", instructor_id:"1", client_id:"9")
+Booking.create!(lesson_id:"3", start_time:"", status:"unapproved", instructor_id:"3", client_id:"10")
+Booking.create!(lesson_id:"4", start_time:"", status:"unapproved", instructor_id:"4", client_id:"11")
 
 Comment.create!(title:"Great teacher", comment:"Joel is awesome!", commentable_id: 3, user_id:5)
 Comment.create!(title:"Enthusiastic but too intense", comment:"had a good time on my kickboxing lesson with joel, he was passionate and enthusiastic, but I could have done with him slowing down a bit", commentable_id: 3, user_id:7)
