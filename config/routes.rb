@@ -3,18 +3,11 @@ Rails.application.routes.draw do
 
   resources :lessons
 
-  # devise_for :users
-  root to: "home#index"
+  get 'users/:id' => 'users#show'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  # devise_scope :user do
-  #   get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
-  #   get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-  # end
-
-  # devise_scope :user do
-  #   get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-  # end
+  devise_for :users
+  root to: "bookings#index"
 
   
   # The priority is based upon order of creation: first created -> highest priority.
