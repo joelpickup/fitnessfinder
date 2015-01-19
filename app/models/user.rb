@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :lessons, class_name: 'Lesson',foreign_key: :instructor_id
+  has_many :bookings
+  has_many :bookings_as_instructor, class_name: 'Booking', foreign_key: :instructor_id
+  has_many :bookings_as_client, class_name: 'Booking', foreign_key: :client_id
 end
