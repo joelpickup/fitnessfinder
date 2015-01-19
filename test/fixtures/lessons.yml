@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  duration: 2015-01-19 12:09:10
+  price: 1
+  instructor_id: 1
+
+two:
+  name: MyString
+  description: MyString
+  duration: 2015-01-19 12:09:10
+  price: 1
+  instructor_id: 1
