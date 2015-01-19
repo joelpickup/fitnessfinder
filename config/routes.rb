@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :lessons
 
+  get 'users/:id' => 'users#show'
+
   devise_for :users
   root to: "bookings#index"
   
