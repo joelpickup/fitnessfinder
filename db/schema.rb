@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119122456) do
+ActiveRecord::Schema.define(version: 20150119122711) do
 
   create_table "bookings", force: true do |t|
-    t.integer  "class_id"
+    t.integer  "lesson_id"
     t.datetime "start_time"
     t.datetime "end_time"
     t.string   "status"
