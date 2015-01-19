@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119122711) do
+ActiveRecord::Schema.define(version: 20150119163746) do
 
   create_table "bookings", force: true do |t|
     t.integer  "lesson_id"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20150119122711) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
