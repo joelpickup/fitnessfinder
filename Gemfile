@@ -30,6 +30,7 @@ gem 'devise'
 gem 'cancancan'
 gem 'acts_as_commentable'
 gem 'ransack'
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'pry-rails'
