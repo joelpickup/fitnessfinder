@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FitnessFinder</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= content_for?(:title) ? yield(:title) : "Fitness App" %></title>
+  <title>FitnessApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,6 +16,10 @@
 <%= link_to "Sign In",new_user_session_path %>
 <%= link_to "Sign Up",new_user_registration_path %>
 <%= link_to "Sign Out",destroy_user_session_path, method: :delete %>
+
+<footer class="row">
+  <nav>&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
+</footer>
   <%= yield %>
 
 </body>
