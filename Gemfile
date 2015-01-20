@@ -33,6 +33,7 @@ gem 'acts_as_commentable'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'ransack'
 gem 'omniauth-facebook'
+gem 'carrierwave', '0.9.0'
 
 group :development, :test do
   gem 'pry-rails'

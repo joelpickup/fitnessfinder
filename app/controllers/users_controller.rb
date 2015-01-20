@@ -5,14 +5,18 @@ class UsersController < ApplicationController
   #   respond_with(@users)
   # end
 
+
   def show
     @user = set_user
 
   end
 
-  # def edit
 
-  # end
+  def update
+    @user.update(user_params)
+    respond_with(@user)
+  end
+
 
   private
     def set_user
@@ -20,7 +24,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :description, :duration, :price, :instructor_id)
+      params.require(:user).permit(:first_name, :last_name, :avatar, :avatar_cache, :remove_avatar, :email, :description, :duration, :price, :instructor_id)
     end
 
 end

@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   get 'users/:id' => 'users#show'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  root to: "bookings#index"
 
   resources :users do
     resources :comments

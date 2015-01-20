@@ -9,6 +9,7 @@
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+
   <div class='login'>
       <% if current_user %>
         <%= current_user.email %>
@@ -20,7 +21,6 @@
         <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
       <% end %>
     </div>
-
 
   <%= yield %>
 
