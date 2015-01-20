@@ -1,1 +1,33 @@
-<%= current_user %>
+<p><strong>First Name: </strong><%= @user.first_name %></p>
+<p><strong>Surname: </strong><%= @user.last_name %></p>
+<p><strong>Role: </strong><%= @user.role %></p>
+
+
+<div class="comments_container">
+  <h2>Recent Comments</h2>
+  <div id="comments_list"> 
+    <% @user.comments.each do |comment| %>
+    <p><%= comment.user.first_name %></p>
+    <p><strong><%= comment.title %></strong></p>
+    <p><%= comment.comment %></p>
+    <% end %>
+  </div>
+  <%= form_tag user_comments_path(@user) do -%>
+  <%= label_tag 'comment'%>
+  <%= text_area_tag "comment", "", placeholder: "Enter Comment", class: "comment" %>
+  <%= submit_tag "Send", :id => "submit", :name => "submit", :class => "form_submit", :disabled => false, :disable_with => "Please wait..." %>
+  <% end -%>
+</div>
+
+</div>
+
+<% if @user.role == "instructor" %>
+<div class="lessons_container">
+  <h2>Lessons</h2>
+  <% @user.lessons.each do |lesson| %>
+  <p><strong><%= lesson.name %></strong></p>
+  <p><%= lesson.description %></p>
+  <button>Request Booking!</button>
+  <% end %>
+</div>
+<% end %>
