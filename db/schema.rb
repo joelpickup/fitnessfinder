@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119163746) do
+ActiveRecord::Schema.define(version: 20150120094908) do
 
   create_table "bookings", force: true do |t|
     t.integer  "lesson_id"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150119163746) do
     t.datetime "updated_at"
     t.string   "provider"
     t.string   "uid"
+    t.string   "user_image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
