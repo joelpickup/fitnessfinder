@@ -4,6 +4,7 @@ class LessonsController < ApplicationController
   respond_to :html
 
   def index
+    raise
     @lessons = Lesson.all
     respond_with(@lessons)
   end

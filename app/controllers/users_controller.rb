@@ -1,17 +1,17 @@
 class UsersController < ApplicationController
 
-  def index
-    @users = User.all
-    respond_with(@users)
-  end
+  # def index
+  #   @users = User.all
+  #   respond_with(@users)
+  # end
 
-  def show
-    respond_with(@user)
-  end
+  # def show
+  #   respond_with(@user)
+  # end
 
-  def edit
+  # def edit
 
-  end
+  # end
 
   private
     def set_lesson
