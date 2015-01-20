@@ -8,12 +8,17 @@ class User < ActiveRecord::Base
 
   validates :first_name, :last_name, :role, presence: :true
 
+  mount_uploader :avatar, AvatarUploader
+
   has_many :lessons, class_name: 'Lesson',foreign_key: :instructor_id
   has_many :bookings_as_instructor, class_name: 'Booking', foreign_key: :instructor_id
   has_many :bookings_as_client, class_name: 'Booking', foreign_key: :client_id
 
 
   before_save :default_role
+
+   
+  
 
   def default_role
     self.role = "client"
