@@ -15,7 +15,10 @@
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name%>
   </div>
-  
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.text_field :role%>
+  </div>
     <%= f.label :avatar do %>
       <%= f.file_field :avatar  %>
       <%= f.hidden_field :avatar_cache %>
