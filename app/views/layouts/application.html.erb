@@ -10,7 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 <header>
-  <nav class="top-bar row" data-topbar role="navigation">
+  <nav class="navbar navbar-default" data-topbar role="navigation">
     <body>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
@@ -18,15 +18,23 @@
       <%= link_to "Sign In",new_user_session_path %>
       <%= link_to "Sign Up",new_user_registration_path %>
       <%= link_to "Sign Out",destroy_user_session_path, method: :delete %>
+      <%= link_to 'edit current user',  edit_user_registration_path %>
+      <%= link_to 'show profile',  users_show_path %>
+
 
     </header>
+
+
+    <div class="container">
 
     <main class="row">
       <%= yield %>
       </main>
 
+    </div>
+
       <footer class="row">
-        <nav>&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
+        <nav class= "navbar-fixed-bottom" >&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
       </footer>
 
 

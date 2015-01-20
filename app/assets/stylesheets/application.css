@@ -17,6 +17,12 @@
 
  header {
    background: #DF6C07;
+   text-align: 
+ }
+
+ .navbar-default{
+  background: #DF6C07;
+
  }
  h1 {
   color:#DF6C07;
@@ -24,4 +30,6 @@
 nav a{
   color:#DF6C07
 }
- 
+footer {
+  text-align: center;
+}
