@@ -25,13 +25,18 @@
 </div>
 
 <% if @user.role == "instructor" %>
+
 <div class="lessons_container">
   <h2>Lessons</h2>
   <% @user.lessons.each do |lesson| %>
   <p><strong><%= lesson.name %></strong></p>
   <p><%= lesson.description %></p>
-  <button id="book">Book</button>
+  <button id="show_booking_form_<%= lesson.id %>">Book!</button>
+  <div id="booking_form_<%= lesson.id %>" class="booking_form">
+    <%= render partial: "booking_form", :locals => {:lesson => lesson } %>
+  </div>
   <% end %>
 </div>
+
 <% end %>
 

@@ -22,6 +22,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    raise
     @booking.save
     respond_with(@booking)
   end
@@ -42,6 +43,6 @@ class BookingsController < ApplicationController
     end
 
     def booking_params
-      params.require(:booking).permit(:class_id, :start_time, :end_time, :status, :instructor_id, :client_id)
+      params.require(:booking).permit(:lesson_id, :start_time, :end_time, :status, :instructor_id, :client_id)
     end
 end
