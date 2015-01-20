@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
 
   before_save :default_role
 
+   mount_uploader :user_image, UserImageUploader
+  
+
   def default_role
     self.role = "client"
   end
