@@ -42,6 +42,10 @@ GEM
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
     cancancan (1.10.1)
+    carrierwave (0.9.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -185,6 +189,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   cancancan
+  carrierwave (= 0.9.0)
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 2.0)

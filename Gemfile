@@ -31,6 +31,7 @@ gem 'cancancan'
 gem 'acts_as_commentable'
 gem 'ransack'
 gem 'omniauth-facebook'
+gem 'carrierwave', '0.9.0'
 
 group :development, :test do
   gem 'pry-rails'
