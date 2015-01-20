@@ -6,6 +6,12 @@ class Booking < ActiveRecord::Base
   validate :instructor_and_client_must_be_different, on: :create
   validate :instructor_must_be_lesson_instructor, on: :create
 
+  before_save :default_status
+
+  def default_status
+    self.status = "unapproved"
+  end
+
   def instructor_and_client_must_be_different
     if client_id == instructor_id
       errors.add(:client_id, "you cannot create a booking with yourself")
