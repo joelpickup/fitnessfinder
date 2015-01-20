@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
 
   before_save :default_role
 
+  acts_as_commentable
+
   def default_role
     self.role = "client"
   end

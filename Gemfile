@@ -30,7 +30,6 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'cancancan'
 gem 'acts_as_commentable'
-gem "acts_as_rateable", :git => "git://github.com/anton-zaytsev/acts_as_rateable.git"
 gem 'ransack'
 gem 'omniauth-facebook'
 
