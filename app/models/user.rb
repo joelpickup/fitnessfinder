@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :bookings_as_client, class_name: 'Booking', foreign_key: :client_id
 
   acts_as_commentable
+  acts_as_votable
 
 
 end
