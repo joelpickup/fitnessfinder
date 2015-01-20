@@ -5,9 +5,9 @@ class UsersController < ApplicationController
   #   respond_with(@users)
   # end
 
-  # def show
-  #   respond_with(@user)
-  # end
+  def show
+    @user = current_user.id
+  end
 
   # def edit
 

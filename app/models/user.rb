@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
+  # mount_uploader :user_image, UserImageUploader
+
   has_many :lessons, class_name: 'Lesson',foreign_key: :instructor_id
   has_many :bookings
   has_many :bookings_as_instructor, class_name: 'Booking', foreign_key: :instructor_id
@@ -11,7 +13,7 @@ class User < ActiveRecord::Base
 
   before_save :default_role
 
-   mount_uploader :user_image, UserImageUploader
+   
   
 
   def default_role
