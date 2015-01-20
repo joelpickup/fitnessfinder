@@ -6,15 +6,18 @@ class UsersController < ApplicationController
   # end
 
   def show
-    @user = current_user.id
+      @user = current_user.id
+      # binding.pry
   end
 
+  def update
+    @user.update(user_params)
+    respond_with(@user)
+  end
   # def edit
 
   # end
-  def user_params
-    params.require(:user).permit(:first_name, :last_name, :user_image)
-  end
+
 
   private
     def set_lesson
@@ -22,7 +25,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :description, :duration, :price, :instructor_id)
+      params.require(:user).permit(:first_name, :last_name, :avatar, :avatar_cache, :remove_avatar, :email, :description, :duration, :price, :instructor_id)
     end
 
 end

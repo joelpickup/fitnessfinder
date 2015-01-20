@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.autoload_paths += %W(#{config.root}/app/uploaders)
+# config.autoload_paths += %W(#{config.root}/app/uploaders)
 
 module FitnessFinder
   class Application < Rails::Application

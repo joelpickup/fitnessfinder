@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
-  # mount_uploader :user_image, UserImageUploader
+  mount_uploader :avatar, AvatarUploader
 
   has_many :lessons, class_name: 'Lesson',foreign_key: :instructor_id
   has_many :bookings

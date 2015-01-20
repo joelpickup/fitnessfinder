@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120094908) do
+ActiveRecord::Schema.define(version: 20150120122734) do
 
   create_table "bookings", force: true do |t|
     t.integer  "lesson_id"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20150120094908) do
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.string   "first_name",                          null: false
-    t.string   "last_name",                           null: false
+    t.string   "first_name",             default: "", null: false
+    t.string   "last_name",              default: "", null: false
     t.string   "role",                                null: false
     t.string   "bio"
     t.string   "reset_password_token"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150120094908) do
     t.string   "provider"
     t.string   "uid"
     t.string   "user_image"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
