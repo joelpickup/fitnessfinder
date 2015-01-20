@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/anton-zaytsev/acts_as_rateable.git
+  revision: 01066eceb2d16e35be437b7392cc3375f1f377f7
+  specs:
+    acts_as_rateable (3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -28,7 +34,6 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     acts_as_commentable (4.0.2)
-    acts_as_rateable (2.0.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
     better_errors (2.1.1)
@@ -183,7 +188,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_commentable
-  acts_as_rateable
+  acts_as_rateable!
   better_errors
   binding_of_caller
   cancancan
