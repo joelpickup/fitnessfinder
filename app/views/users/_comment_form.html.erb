@@ -1,0 +1,5 @@
+<%= form_tag user_comments_path(@user) do -%>
+<%= label_tag 'comment'%>
+<%= text_area_tag "comment", "", placeholder: "Enter Comment", class: "comment" %>
+<%= submit_tag "Send", :id => "submit", :name => "submit", :class => "form_submit", :disabled => false, :disable_with => "Please wait..." %>
+<% end -%>

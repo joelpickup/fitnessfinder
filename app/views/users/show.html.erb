@@ -4,8 +4,9 @@
 <p><strong>First Name: </strong><%= @user.first_name %></p>
 <p><strong>Surname: </strong><%= @user.last_name %></p>
 <p><strong>Role: </strong><%= @user.role %></p>
-
-
+Likes: <%= @user.get_likes.count %>
+<%= button_to "like", like_user_path(@user)%>
+<%= button_to "dislike", dislike_user_path(@user)%>
 <div class="comments_container">
   <h2>Recent Comments</h2>
   <div id="comments_list"> 
@@ -15,11 +16,7 @@
     <p><%= comment.comment %></p>
     <% end %>
   </div>
-  <%= form_tag user_comments_path(@user) do -%>
-  <%= label_tag 'comment'%>
-  <%= text_area_tag "comment", "", placeholder: "Enter Comment", class: "comment" %>
-  <%= submit_tag "Send", :id => "submit", :name => "submit", :class => "form_submit", :disabled => false, :disable_with => "Please wait..." %>
-  <% end -%>
+<%= render partial: "comment_form" %>
 </div>
 
 </div>

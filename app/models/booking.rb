@@ -6,7 +6,7 @@ class Booking < ActiveRecord::Base
   validate :instructor_and_client_must_be_different, on: :create
   validate :instructor_must_be_lesson_instructor, on: :create
 
-  before_save :default_status
+  before_create :default_status
 
   def default_status
     self.status = "unapproved"
