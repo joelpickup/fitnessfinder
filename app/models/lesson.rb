@@ -4,4 +4,5 @@ class Lesson < ActiveRecord::Base
   validates :name, :description, :price, :instructor_id, presence: :true
   validates :name, uniqueness: { scope: :instructor_id}
 
+
 end
