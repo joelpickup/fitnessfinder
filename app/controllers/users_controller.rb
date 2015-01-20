@@ -9,6 +9,8 @@ class UsersController < ApplicationController
   def show
     @user = set_user
 
+
+
   end
 
 
