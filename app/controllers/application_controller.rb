@@ -8,6 +8,9 @@ class ApplicationController < ActionController::Base
     new_user_session_path
   end
 
+  def after_sign_in_path_for(resource)
+    users_show_path(current_user) #your path
+  end
   protected
 
   def configure_permitted_parameters
