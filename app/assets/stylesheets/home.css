@@ -10,11 +10,10 @@ h1{
   color: #00ff00;
 }
 h2{
-
-}
-h3{
-  font-size: 40px;
   color:#00ff00;
   font-weight: bold;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+h4{
+  color:#DF6C07;
 }
