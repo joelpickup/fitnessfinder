@@ -5,9 +5,14 @@
   padding-bottom: 300px;
 }*/
 
+body{
+  padding-top: 150px;
+}
+
 h1{
   font-size: 50px;
   color: #00ff00;
+
 }
 
 h2{
@@ -20,4 +25,8 @@ h4{
   color:#DF6C07;
   font-size: 20px;
   text-shadow: -1px 0 white, 0 -1.5px white, 1px 0 white, 0 -1.5px white;
+}
+
+#myCarousel{
+  top: 150px;
 }
