@@ -15,39 +15,38 @@
  */
 
 
-.booking_form{
+ .booking_form{
   display: none;
 }
 #add_lesson_form{
   display: none;
-
- body{
+}
+body{
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
- 
 
 
 }
 
- header {
-   background: #DF6C07;
- }
+header {
+ background: #DF6C07;
+}
 
- .navbar-default{
+.navbar-default{
   background: #DF6C07;
 
 }
 
 .homepage_cover{
 
- 
+
 }
 .col-sm-9{
   text-align: right;
   font-size: 20px;
 }
 
-h2,
-h3,
+h2
+h3
 h4 {
   color:#000000;
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;

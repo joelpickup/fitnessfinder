@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'profiles/:id' => 'users#show'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  root to: "bookings#index"
+  root to: "home#index"
 
   get 'dashboard' => 'home#dashboard'
 
