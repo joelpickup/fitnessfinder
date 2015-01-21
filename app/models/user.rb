@@ -27,26 +27,26 @@ class User < ActiveRecord::Base
     return "You should add method :name in your Messageable model"
   end
 
-  def available_times
-    a = []
-    b = []
-    t = Time.new(1993, 02, 24, 6, 45, 0, "+07:00")
-    53.times do
-      t += 15*60
-      x = t.strftime("%H:%M")
-      a << x
-    end
-    start_times = bookings_as_instructor.where(status: "approved").map do |x| x.start_time.strftime("%H:%M") end
-    end_times = bookings_as_instructor.where(status: "approved").map do |x| x.end_time.strftime("%H:%M") end
+  AVAILABLE_TIMES = ["07:00", "07:15","07:30","07:45","08:00","08:15","08:30","08:45","09:00","09:15","09:30","09:45","10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00","16:15","16:30","16:45","17:00","17:15","17:30","17:45","18:00","18:15","18:30","18:45","19:00","19:15","19:30","19:45","20:00"]
+
+  def available_times(date)
+    bookings_on_this_date = bookings_as_instructor.where("start_time::date = ?", date)
+    start_times = bookings_on_this_date.where(status: "approved").map do |x| x.start_time.strftime("%H:%M") end
+    end_times = bookings_on_this_date.where(status: "approved").map do |x| x.end_time.strftime("%H:%M") end
     times_set = start_times.zip(end_times)
+    a = []
+    if times_set.empty?
+      return AVAILABLE_TIMES
+    else
     times_set.each do |set|
-      start = a.index(set[0])
-      stop = a.index(set[1])
+      start = AVAILABLE_TIMES.index(set[0])
+      stop = AVAILABLE_TIMES.index(set[1])
       (start..stop).each{|time|
-        b << a[time]
+        a << AVAILABLE_TIMES[time]
       }
     end
-    x = a - b
+    end
+    AVAILABLE_TIMES - a
   end
 
   def mailboxer_email(object)

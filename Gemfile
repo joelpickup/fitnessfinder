@@ -35,7 +35,7 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'ransack'
 gem 'omniauth-facebook'
 gem 'carrierwave', '0.9.0'
-
+gem 'bootstrap-datepicker-rails'
 gem 'simple_form'
 gem 'mailboxer'
 

@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   def show
     @user = set_user
     @booking = Booking.new
+    @available_times = @user.available_times
   end
 
   def update

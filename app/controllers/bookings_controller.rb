@@ -21,7 +21,9 @@ class BookingsController < ApplicationController
   end
 
   def create
+    start_time = params[:booking]["start_time(1i)"] + "-" + params[:booking]["start_time(2i)"] + "-" + params[:booking]["start_time(3i)"] + " " + params[:booking]["time"] + ":00"
     @booking = Booking.new(booking_params)
+    @booking.start_time = start_time
     @booking.end_time = @booking.start_time + @booking.lesson.duration*60
     @booking.save
     respond_with(@booking)
