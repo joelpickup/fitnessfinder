@@ -16,3 +16,6 @@
 .booking_form{
   display: none;
 }
+#add_lesson_form{
+  display: none;
+}

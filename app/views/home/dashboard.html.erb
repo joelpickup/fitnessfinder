@@ -1,6 +1,6 @@
 <% if current_user.role == "instructor" %>
 I am an instructor 
-<button id="show_lesson_form">Add Lesson</button>
+<button class="lesson_button">Add Lesson</button>
 <div id="add_lesson_form">
   <%= render partial: "lesson_form"%>
 </div>

@@ -15,10 +15,13 @@
 //= require turbolinks
 //= require_tree .
 $(function(){
-  $('button').on('click', function(){
+  $('.book_button').on('click', function(){
     num = this.id.split("_").pop();
     string = "#booking_form_" + num;
     $('.booking_form').slideUp();
     $(string).slideDown();
   });
+  $('.lesson_button').on('click', function(){
+    $('#add_lesson_form').slideToggle();
+  })
 });
