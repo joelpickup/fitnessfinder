@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   has_many :bookings_as_instructor, class_name: 'Booking', foreign_key: :instructor_id
   has_many :bookings_as_client, class_name: 'Booking', foreign_key: :client_id
 
-  before_save :default_role
+  before_create :default_role
 
   acts_as_commentable
   acts_as_votable
