@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+ 
+
+
+}
+
+ header {
+   background: #DF6C07;
+ }
+
+ .navbar-default{
+  background: #DF6C07;
+
+}
+
+.homepage_cover{
+
+ 
+}
+.col-sm-9{
+  text-align: right;
+  font-size: 20px;
+}
+
+h2,
+h3,
+h4 {
+  color:#000000;
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+nav a{
+}
+footer {
+  text-align: center;
+}
