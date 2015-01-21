@@ -27,7 +27,7 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
     @lesson.save
-    respond_with(@lesson)
+    redirect_to '/dashboard'
   end
 
   def update

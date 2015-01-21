@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :bookings
   resources :lessons
 
-  get 'profiles/:id' => 'users#show'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   root to: "home#index"
@@ -11,6 +10,7 @@ Rails.application.routes.draw do
   get 'find_instructor' => 'lessons#index'
 
 
+  get "profiles/:id", to: "users#show"
 
   resources :users do
     resources :comments
