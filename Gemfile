@@ -37,6 +37,7 @@ gem 'omniauth-facebook'
 gem 'carrierwave', '0.9.0'
 
 gem 'simple_form'
+gem 'mailboxer'
 
 gem 'twitter-bootstrap-rails'
 
