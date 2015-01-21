@@ -3,4 +3,7 @@
 Welcome back <%= current_user.first_name%> <br>
 <%= image_tag current_user.avatar %>
 
+<%= link_to "Sign Out",destroy_user_session_path, method: :delete %>
+<%= link_to 'Edit current user',  edit_user_registration_path %>
+
 

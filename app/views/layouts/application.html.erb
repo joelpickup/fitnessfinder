@@ -18,25 +18,24 @@
       <%= link_to "Sign In",new_user_session_path %>
       <%= link_to "Sign Up",new_user_registration_path %>
       <%= link_to "Sign Out",destroy_user_session_path, method: :delete %>
-      <%= link_to 'edit current user',  edit_user_registration_path %>
-      <%= link_to 'show profile',  users_show_path %>
+      <%= link_to 'Edit current user',  edit_user_registration_path %>
+      <%= link_to 'Show profile',  users_show_path %>
+      <div class="col-sm-9 tagline">Finding a new healthier you</div>
 
 
-    </header>
-
+</header>
 
     <div class="container">
 
-    <main class="row">
-      <%= yield %>
+      <main class="row">
+        <%= yield %>
       </main>
 
     </div>
 
-      <footer class="row">
-        <nav class= "navbar-fixed-bottom" >&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
-      </footer>
-
+    <footer class="row">
+      <nav class= "navbar-fixed-bottom" >&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
+    </footer>
 
   </body>
   </html>
