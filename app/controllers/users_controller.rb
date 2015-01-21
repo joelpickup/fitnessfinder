@@ -16,14 +16,11 @@ class UsersController < ApplicationController
   end
 
   def update
-    raise
     @user.update(user_params)
     respond_with(@user)
   end
 
-  def search
 
-  end
 
   private
     def set_user

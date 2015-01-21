@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
 
   get "profiles/:id", to: "users#show"
+  get "my_messages", to: "messages#messages"
+  get "my_messages/:id", to: "messages#conversation", :as => "conversation"
 
   resources :users do
     resources :comments

@@ -9,5 +9,4 @@ class VotesController < ApplicationController
     @user.disliked_by current_user
     redirect_to @user
   end
-
 end

@@ -1,0 +1,5 @@
+<%= conversation.subject %>
+<% recipients = conversation.recipients.map do |x| x.id end %>
+<% recipients.delete(current_user.id) %>
+<%= User.find(recipients[0]).first_name %>
+<%= link_to 'Show', conversation_path(conversation)  %><br>

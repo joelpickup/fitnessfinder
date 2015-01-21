@@ -18,9 +18,22 @@ class User < ActiveRecord::Base
 
   acts_as_commentable
   acts_as_votable
+  acts_as_messageable
 
   def default_role
     self.role = "client"
+  end
+
+  def name
+    return "You should add method :name in your Messageable model"
+  end
+
+  def mailboxer_email(object)
+    #Check if an email should be sent for that object
+    #if true
+    return "define_email@on_your.model"
+    #if false
+    #return nil
   end
 
   def self.from_omniauth(auth)
