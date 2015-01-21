@@ -1,0 +1,11 @@
+/*.homepage_cover {
+  background-image: url("homepage1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-bottom: 300px;
+}*/
+
+h1{
+  font-size: 50px;
+  color: #00ff00;
+}
