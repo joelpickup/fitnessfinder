@@ -10,8 +10,8 @@
   <%= csrf_meta_tags %>
 </head>
 
-  <body>
-    <nav class="navbar navbar-default" data-topbar role="navigation">
+<body>
+  <nav class="navbar navbar-default" data-topbar role="navigation">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
@@ -19,22 +19,13 @@
     <%= link_to "Sign Up",new_user_registration_path %>
   </nav>
 
+  
+  <%= yield %>
+  
 
-    <div class="col-sm-9 tagline">Finding a new healthier you</div>
+  <footer class="row">
+    <nav class= "navbar-fixed-bottom" >&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
+  </footer>
 
-
-
-    <div class="container">
-
-      <main class="row">
-        <%= yield %>
-      </main>
-
-    </div>
-
-    <footer class="row">
-      <nav class= "navbar-fixed-bottom" >&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
-    </footer>
-
-  </body>
-  </html>
+</body>
+</html>
