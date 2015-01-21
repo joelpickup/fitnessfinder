@@ -26,5 +26,15 @@ $(function(){
   $('.lesson_button').on('click', function(){
     $('#add_lesson_form').slideToggle();
   });
+  $('#search_form').
+    on('ajax:success', function(ev, data, status, xhr){
+      $('#lessons_list').html(data);
+    }).
+    on('ajax:error', function(xhr, status, error){
+      console.log('error: ', error);
+    });
+    $('#search').on('keyup',function(){
+      $('#search_form').submit();
+    });
 });
 

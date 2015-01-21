@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
 
   # def index
-  #   @users = User.all
-  #   respond_with(@users)
-  # end
+  #   if params[:search]
+  #     @users
+  #   else
+  #     # @products = Product.all
+  #   end
 
+  #   # render @products, layout: false if request.xhr
+  # end
 
   def show
     @user = set_user
@@ -15,6 +19,10 @@ class UsersController < ApplicationController
     raise
     @user.update(user_params)
     respond_with(@user)
+  end
+
+  def search
+
   end
 
   private

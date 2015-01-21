@@ -4,9 +4,12 @@ class LessonsController < ApplicationController
   respond_to :html
 
   def index
-    raise
-    @lessons = Lesson.all
-    respond_with(@lessons)
+    if params[:search]
+      @lessons = Lesson.where("name like ?", "%#{params[:search]}%")
+    else
+      @lessons = Lesson.all
+    end
+    render @lessons, layout: false if request.xhr?
   end
 
   def show
@@ -38,11 +41,11 @@ class LessonsController < ApplicationController
   end
 
   private
-    def set_lesson
-      @lesson = Lesson.find(params[:id])
-    end
+  def set_lesson
+    @lesson = Lesson.find(params[:id])
+  end
 
-    def lesson_params
-      params.require(:lesson).permit(:name, :description, :duration, :price, :instructor_id)
-    end
+  def lesson_params
+    params.require(:lesson).permit(:name, :description, :duration, :price, :instructor_id)
+  end
 end

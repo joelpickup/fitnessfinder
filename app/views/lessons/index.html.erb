@@ -1,33 +1,22 @@
-<h1>Listing lessons</h1>
+<%= form_tag lessons_path, method: :get, id: :search_form, remote: :true do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
-      <th>Duration</th>
       <th>Price</th>
+      <th>Duration</th>
       <th>Instructor</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
-    <% @lessons.each do |lesson| %>
-      <tr>
-        <td><%= lesson.name %></td>
-        <td><%= lesson.description %></td>
-        <td><%= lesson.duration %></td>
-        <td><%= lesson.price %></td>
-        <td><%= lesson.instructor_id %></td>
-        <td><%= link_to 'Show', lesson %></td>
-        <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
-        <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <tbody id='lessons_list'>
+    <%= render @lessons %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Lesson', new_lesson_path %>

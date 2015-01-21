@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get 'dashboard' => 'home#dashboard'
+  get 'find_instructor' => 'lessons#index'
 
 
 
