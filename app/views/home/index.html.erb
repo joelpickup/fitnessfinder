@@ -1,25 +1,45 @@
 <div class="homepage_cover">
 
-  <div id= "myCarousel" class= "carousel">
+  <div id= "myCarousel" class= "carousel slide">
 
+
+
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <%= image_tag("homepage1.jpg", class: "img-responsive") %>
+        <div class = "carousel-caption">
+          <h4>something</h4>
+          <p>description</p>
+        </div>
+      </div>
+        
+        
+        <div class="item">
+        <%= image_tag("homepage2.jpg", class: "img-responsive") %>
+        <div class = "carousel-caption">
+          <h4>something</h4>
+          <p>description</p>
+        </div>
+      </div>
+        
+        
+        <div class="item">
+        <%= image_tag("homepage3.jpg", class: "img-responsive") %>
+        <div class = "carousel-caption">
+          <h4>something</h4>
+          <p>description</p>
+        </div>
+      </div>
+    </div>
     <ol class= "carousel-indicators">
       <li data-target="#myCarousel"data-slide-to="0"></li>
       <li data-target="#myCarousel"data-slide-to="1"></li>
       <li data-target="#myCarousel"data-slide-to="2"></li>
     </ol>
-
-    <div class="carousel-inner">
-      <div class="item active">
-        
-        <img src="img/homepage1.jpg" alt= "change text"class= "img-responsive">
-        
-        <img src="img/homepage2.jpg" alt= "change text"class= "img-responsive">
-        
-        <img src="img/homepage3.jpg" alt= "change text"class= "img-responsive">
-      </div>
-    </div>
-
   </div>
+
+
 
   <h1>Fitness App</h1>
   <p>some kind of health message here</p>
