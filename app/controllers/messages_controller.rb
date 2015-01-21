@@ -16,5 +16,11 @@ class MessagesController < ApplicationController
     @conversation = current_user.mailbox.conversations.find(params[:id])
     @messages = @conversation.messages
   end
+
+  def reply
+    conversation = current_user.mailbox.conversations.find(params[:id])
+    current_user.reply_to_conversation(conversation, params[:reply][:body])
+    redirect_to '/my_messages/' + params[:id]
+  end
   
 end
