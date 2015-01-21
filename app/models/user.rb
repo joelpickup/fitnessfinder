@@ -5,7 +5,6 @@ class User < ActiveRecord::Base
   :recoverable, :rememberable, :trackable, :validatable
 
   devise :omniauthable, :omniauth_providers => [:facebook]
-
   validates :first_name, :last_name, :role, presence: :true
 
   mount_uploader :avatar, AvatarUploader
@@ -26,6 +25,28 @@ class User < ActiveRecord::Base
 
   def name
     return "You should add method :name in your Messageable model"
+  end
+
+  def available_times
+    a = []
+    b = []
+    t = Time.new(1993, 02, 24, 6, 45, 0, "+07:00")
+    53.times do
+      t += 15*60
+      x = t.strftime("%H:%M")
+      a << x
+    end
+    start_times = bookings_as_instructor.where(status: "approved").map do |x| x.start_time.strftime("%H:%M") end
+    end_times = bookings_as_instructor.where(status: "approved").map do |x| x.end_time.strftime("%H:%M") end
+    times_set = start_times.zip(end_times)
+    times_set.each do |set|
+      start = a.index(set[0])
+      stop = a.index(set[1])
+      (start..stop).each{|time|
+        b << a[time]
+      }
+    end
+    x = a - b
   end
 
   def mailboxer_email(object)
