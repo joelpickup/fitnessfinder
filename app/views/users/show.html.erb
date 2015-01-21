@@ -5,6 +5,7 @@
 <p><strong>Surname: </strong><%= @user.last_name %></p>
 <p><strong>Role: </strong><%= @user.role %></p>
 Likes: <%= @user.get_likes.count %>
+Dislikes: <%= @user.get_dislikes.count %>
 <%= button_to "like", like_user_path(@user)%>
 <%= button_to "dislike", dislike_user_path(@user)%>
 <div class="comments_container">

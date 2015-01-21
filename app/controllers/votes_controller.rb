@@ -6,7 +6,7 @@ class VotesController < ApplicationController
   end
   def downvote
     @user = User.find(params[:id])
-    @user.downvote_from current_user
+    @user.disliked_by current_user
     redirect_to @user
   end
 

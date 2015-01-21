@@ -7,11 +7,15 @@ Rails.application.routes.draw do
 
   root to: "bookings#index"
 
+  get 'dashboard' => 'home#dashboard'
+
+
+
   resources :users do
     resources :comments
     member do
       post "like", to: "votes#upvote"
-      post "dislike", to: "votes#upvote"
+      post "dislike", to: "votes#downvote"
     end
   end
   

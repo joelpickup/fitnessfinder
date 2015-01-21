@@ -1,0 +1,11 @@
+<% if current_user.role == "instructor" %>
+I am an instructor 
+<button id="show_lesson_form">Add Lesson</button>
+<div id="add_lesson_form">
+  <%= render partial: "lesson_form"%>
+</div>
+<% end %>
+
+<h2>Upcoming Bookings</h2>
+<h2>Past Bookings</h2>
+
