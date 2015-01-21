@@ -26,6 +26,10 @@ $(function(){
   $('.lesson_button').on('click', function(){
     $('#add_lesson_form').slideToggle();
   });
+  $('.conversation_form').hide();
+  $('#new_conversation').on('click', function(){
+    $('.conversation_form').slideToggle();
+  });
   $('#search_form').
     on('ajax:success', function(ev, data, status, xhr){
       $('#lessons_list').html(data);
