@@ -14,6 +14,12 @@
  *= require_self
  */
 
+ body{
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-image: url("Fitness_Homepage_Slider.jpg");
+  
+
+}
 
  header {
    background: #DF6C07;
@@ -22,14 +28,22 @@
  .navbar-default{
   background: #DF6C07;
 
- }
- .col-sm-9{
+}
+
+.homepage_cover{
+
+}
+.col-sm-9{
   text-align: right;
   font-size: 20px;
- }
- h1 {
+}
+h1,
+h2,
+h3,
+h4 {
   color:#000000;
- }
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 nav a{
 }
 footer {
