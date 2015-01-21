@@ -23,5 +23,5 @@ $(function(){
   });
   $('.lesson_button').on('click', function(){
     $('#add_lesson_form').slideToggle();
-  })
+  });
 });

@@ -1,1 +1,8 @@
-Lesson form
+<%= simple_form_for @lesson do |f| %>
+<%= hidden_field_tag("lesson[instructor_id]", current_user.id) %>
+<%= f.input :name %>
+<%= f.input :description %>
+<%= f.input :price %>
+<%= f.input :duration %>
+<%= f.button :submit %>
+<% end %>

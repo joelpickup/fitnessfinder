@@ -1,11 +1,21 @@
 <% if current_user.role == "instructor" %>
-I am an instructor 
+<% current_user.lessons.each do |lesson| %>
+<strong><%= lesson.name %></strong><br>
+<%= lesson.description %><br>
+Delete<br>
+<% end %>
 <button class="lesson_button">Add Lesson</button>
 <div id="add_lesson_form">
   <%= render partial: "lesson_form"%>
 </div>
 <% end %>
 
-<h2>Upcoming Bookings</h2>
-<h2>Past Bookings</h2>
+<h2>Upcoming Lessons</h2>
+<% @upcoming_lessons.each do |booking| %>
+<%= render booking %>
+<% end %>
+<h2>Past Lessons</h2>
+<% @past_lessons.each do |booking| %>
+<%= render booking %>
+<% end %>
 

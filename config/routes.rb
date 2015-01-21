@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :comments
+    resources :lessons
     member do
       post "like", to: "votes#upvote"
       post "dislike", to: "votes#downvote"

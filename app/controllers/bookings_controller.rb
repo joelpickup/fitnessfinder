@@ -22,6 +22,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.end_time = @booking.start_time + @booking.lesson.duration*60
     @booking.save
     respond_with(@booking)
   end
