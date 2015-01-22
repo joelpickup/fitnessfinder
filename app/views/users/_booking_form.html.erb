@@ -2,7 +2,7 @@
 <%= hidden_field_tag("booking[client_id]", current_user.id) %>
 <%= hidden_field_tag("booking[instructor_id]", lesson.instructor.id) %>
 <%= hidden_field_tag("booking[lesson_id]", lesson.id) %>
-<%= date_select("booking", "start_time") %>
+<%= date_select("#{lesson.id}_booking", "start_time") %>
 <%= select_tag "booking[time]", options_from_collection_for_select(@available_times, :to_s, :to_s) %>
 <%= button_tag :submit %>
 <% end %>
