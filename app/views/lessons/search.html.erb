@@ -1,0 +1,10 @@
+<% @lessons.each do |lesson| %>
+<%= render lesson %>
+<% end %>
+
+<%= form_tag lessons_path, method: :get, id: :search_form, remote: :true do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>

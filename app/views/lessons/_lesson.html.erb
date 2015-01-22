@@ -1,0 +1,7 @@
+<tr>
+  <td><%= lesson.name %></td>
+  <td><%= lesson.description %></td>
+  <td><%= lesson.price %></td>
+  <td><%= lesson.duration %></td>
+  <td>See their profile:<a href="/profiles/<%= lesson.instructor_id %>"><%= lesson.instructor.first_name %></a></td>
+</tr>

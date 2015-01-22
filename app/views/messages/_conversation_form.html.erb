@@ -1,0 +1,6 @@
+<%= form_tag(new_conversation_path) do %>
+<%= collection_select(:conversation, :recipient, User.all, :id, :first_name) %><br>
+Title:<%= text_field_tag("conversation[title]") %><br>
+Body:<%= text_area_tag("conversation[body]") %>
+<%= submit_tag("send!") %>
+<% end %>

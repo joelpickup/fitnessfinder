@@ -2,19 +2,26 @@ Rails.application.routes.draw do
   resources :bookings
   resources :lessons
 
-  get 'profiles/:id' => 'users#show'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
 
   root to: "home#index"
 
   get 'dashboard' => 'home#dashboard'
+  get 'find_instructor' => 'lessons#index'
 
   get "profiles/:id", to: "users#show"
 
   get "users/show"
 
 
+
+  get "profiles/:id", to: "users#show"
+  post "profiles/:id", to: "users#show"
+  get "my_messages", to: "messages#messages"
+  post "my_messages", to: "messages#create", :as => "new_conversation"
+  get "my_messages/:id", to: "messages#conversation", :as => "conversation"
+  post "my_messages/:id", to: "messages#reply", :as => "reply"
 
 
   resources :users do

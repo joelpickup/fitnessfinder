@@ -3,6 +3,6 @@
 <%= f.input :name %>
 <%= f.input :description %>
 <%= f.input :price %>
-<%= f.input :duration %>
+Duration: <%= select_tag "lesson[duration]", options_for_select([ "15", "30","45","60","75","90"], "15") %><br>
 <%= f.button :submit %>
 <% end %>

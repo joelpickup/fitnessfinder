@@ -1,7 +1,8 @@
-<%= simple_form_for @booking do |f| %>
+<%= form_tag(bookings_path) do %>
 <%= hidden_field_tag("booking[client_id]", current_user.id) %>
 <%= hidden_field_tag("booking[instructor_id]", lesson.instructor.id) %>
 <%= hidden_field_tag("booking[lesson_id]", lesson.id) %>
-<%= f.input :start_time %>
-<%= f.button :submit %>
+<%= date_select("#{lesson.id}_booking", "start_time") %>
+<%= select_tag "booking[time]", options_from_collection_for_select(@available_times, :to_s, :to_s) %>
+<%= button_tag :submit %>
 <% end %>
