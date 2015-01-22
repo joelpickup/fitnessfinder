@@ -29,7 +29,7 @@ header {
 }
 
 .navbar-default{
-  background: #DF6C07;
+  background: #000000;
 
 }
 
@@ -38,9 +38,9 @@ header {
   font-size: 20px;
 }
 
-h2,
+
 h3{
-  color:#000000;
+  color:#DF6C07;
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 nav a{

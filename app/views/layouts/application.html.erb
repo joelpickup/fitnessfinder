@@ -15,35 +15,45 @@
 
 <body>
 
-<nav class="navbar navbar-default" data-topbar role="navigation">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <nav class="navbar navbar-default navbar-static-top" data-topbar role="navigation">
+    <!-- <div class="navbar-header"> -->
+    <div class = "container">
 
-  <%= bootstrap_flash %>
+      <a href ="#" class = "navbar-brand">Fitness App</a>
 
-  <div class='login'>
-      <% if current_user %>
-        <%= current_user.email %>
-        <%= link_to "Dashboard", dashboard_path %>
-        <%= link_to "Find Instructor", find_instructor_path %>
-        <%= link_to "My Messages", my_messages_path %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-        <%= link_to "Edit", edit_user_registration_path %>
-      <% else %>
-        <%= link_to "Sign In", new_user_session_path %>
-        <%= link_to "Register", new_user_registration_path %>
-        or
-        <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-      
-      <% end %>
-    </div>
+      <button class= "navbar-toggle" data toggle = "collapse" data-target = ".navHeaderCollapse">
+      <div class ="collapse navbar-collapse navHeaderCollapse">
+
+        <ul class= "nav navbar-nav navbar-right">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <%= bootstrap_flash %>
+        <div class='login'>
+          <% if current_user %>
+          <%= current_user.first_name %>
+          <%= link_to "My profile", dashboard_path %>
+          <%= link_to "My Messages", my_messages_path %>
+          <%= link_to "Find Instructor", find_instructor_path %>
+          <%= link_to "Dashboard", dashboard_path %>        
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          <% else %>
+          <%= link_to "Sign In", new_user_session_path %>
+          <%= link_to "Register", new_user_registration_path %>
+          <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+          </ul>
+          </button>
+          <% end %>
+        </div>
+      </button>
+      </div>
     </nav>
-  <%= yield %>
+    <%= yield %>
 
 
-  <footer class="row">
-    <nav class= "navbar-fixed-bottom" >&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
-  </footer>
+    <footer class="row">
+      <nav class= "navbar-fixed-bottom" >&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
+    </footer>
 
-</body>
-</html>
+  </body>
+  </html>
