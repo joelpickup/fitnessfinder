@@ -1,8 +1,12 @@
-<h2>Conversations</h2>
-<button id="new_conversation">Start A Convo</button>
-<div class="conversation_form">
-  <%= render 'conversation_form' %>
+<div class="conversations_page_container">
+<div class="container">
+  <h2>Conversations</h2>
+  <button id="new_conversation">Start A Convo</button>
+  <div class="conversation_form">
+    <%= render 'conversation_form' %>
+  </div>
+  <div class="conversations_container">
+    <%= render @conversations %>
+  </div>
 </div>
-<div class="conversations_container">
-<%= render @conversations %>
 </div>

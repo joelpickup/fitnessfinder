@@ -56,10 +56,11 @@ $(function(){
       url: url,
       data: data,
       success: function(response){
+        console.log(response.options);
         var new_times = response.options;
-        $('#booking_time').empty();
+        $('#booking_time_'+lesson).empty();
         for(var i=0; i<new_times.length; i++){
-          $('#booking_time').append('<option value='+new_times[i]+'>'+new_times[i]+'</option>');
+          $('#booking_time_'+lesson).append('<option value='+new_times[i]+'>'+new_times[i]+'</option>');
         }
       },
       error: function(response){

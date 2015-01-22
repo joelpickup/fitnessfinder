@@ -11,7 +11,6 @@ class UsersController < ApplicationController
   # end
 
   def show
-
     @user = set_user
     @booking = Booking.new
     if params[:string]
