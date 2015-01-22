@@ -20,16 +20,12 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :duration %><br>
-    <%= f.number_field :duration %>
+    <%= f.label :duration %> - (mins) <br>
+    <%= select_tag "lesson[duration]", options_for_select([ "15", "30","45","60","75","90"], "15") %>
   </div>
   <div class="field">
     <%= f.label :price %><br>
     <%= f.number_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :instructor_id %><br>
-    <%= f.number_field :instructor_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

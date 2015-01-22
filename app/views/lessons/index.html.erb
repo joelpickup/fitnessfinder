@@ -1,23 +1,28 @@
-<%= form_tag lessons_path, method: :get, id: :search_form, remote: :true do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
+<div class="table_container">
+  <div class="heading_container">
+    <h2>Find an Instructor</h2>
+    <h3>Type in a class</h3>
+  </div>
+  <%= form_tag lessons_path, method: :get, id: :search_form, remote: :true do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+  <% end %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Duration</th>
+        <th>Instructor</th>
+      </tr>
+    </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Duration</th>
-      <th>Instructor</th>
-    </tr>
-  </thead>
 
-
-  <tbody id='lessons_list'>
-    <%= render @lessons %>
-  </tbody>
-</table>
+    <tbody id='lessons_list'>
+      <%= render @lessons %>
+    </tbody>
+  </table>
+</div>

@@ -1,3 +1,4 @@
-<%= booking.lesson.name %><br>
-<%= booking.instructor.first_name %><br>
-<%= booking.status %>
+<%= booking.start_time.strftime("%d/%m/%y - %a - %R") %> - <strong><%= booking.lesson.name %></strong> - <%= booking.instructor.first_name if booking.client == current_user %> <%= booking.client.first_name if booking.instructor == current_user %> - <%= booking.status %>
+<% if current_user.role == "instructor" && (current_user == booking.instructor) && (booking.status == "unapproved") %>
+<%= button_to "Approve", approve_path(booking) %>
+<% end %>

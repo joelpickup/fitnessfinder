@@ -9,11 +9,10 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'home#dashboard'
   get 'find_instructor' => 'lessons#index'
-
   get "profiles/:id", to: "users#show"
-
   get "users/show"
 
+  post 'booking/:id/approve', to: 'bookings#approve', :as =>"approve"
 
   get "profiles/:id", to: "users#show"
   post "profiles/:id", to: "users#show"

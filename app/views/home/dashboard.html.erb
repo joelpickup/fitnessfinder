@@ -1,30 +1,47 @@
 <div class="dashboard_container">
+  <div class="dashboard_left">
+    <% if current_user.role == "instructor" %>
+    <section class="dashboard_upcoming_bookings_container">
+      <h2>Upcoming Bookings</h2>
+      <% if !@upcoming_bookings.empty? %>
+      <%= render @upcoming_bookings %>
+      <% else %>
+      <h3>No upcoming bookings.</h3>
+      <% end %>
+    </section>
+    <% end %>
   <section class="bookings_container">
-    <h2>Upcoming Lessons</h2>
+    <h2>Upcoming Sessions</h2>
     <% if !@upcoming_lessons.empty? %>
     <%= render @upcoming_lessons %>
     <% else %>
     <h3>No upcoming lessons.</h3>
     <% end %>
-    <h2>Past Lessons</h2>
+    <h2>Past Sessions</h2>
     <% if !@past_lessons.empty? %>
     <%= render @past_lessons %>
     <% else %>
     <h3>No upcoming lessons.</h3>
     <% end %>
   </section>
-  <% if current_user.role == "instructor" %>
-  <aside class="dashboard_lessons_container">
-    <h2>My Lessons</h2>
-    <% current_user.lessons.each do |lesson| %>
-    <strong><%= lesson.name %></strong><br>
-    <%= lesson.description %><br>
-    Delete<br>
+
+  </div>
+  <div class="dashboard_right">
+    <% if current_user.role == "instructor" %>
+    <section class="dashboard_lessons_container">
+      <h2>My Lessons</h2>
+      <% current_user.lessons.each do |lesson| %>
+      <strong><%= lesson.name %></strong><br> 
+      <%= link_to 'delete', lesson_path(lesson), :method => :delete %> <%= link_to 'edit', edit_lesson_path(lesson) %> <br>
+      <%= lesson.description %><br>
+      
+      <% end %>
+      <button class="lesson_button">Add Lesson</button>
+      <div id="add_lesson_form">
+        <%= render "lesson_form"%>
+      </div>
+    </section>
     <% end %>
-    <button class="lesson_button">Add Lesson</button>
-    <div id="add_lesson_form">
-      <%= render "lesson_form"%>
-    </div>
-  </aside>
-  <% end %>
+  </div>
+
 </div>

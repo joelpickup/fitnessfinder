@@ -32,12 +32,12 @@ class LessonsController < ApplicationController
 
   def update
     @lesson.update(lesson_params)
-    respond_with(@lesson)
+    redirect_to '/dashboard'
   end
 
   def destroy
     @lesson.destroy
-    respond_with(@lesson)
+    redirect_to dashboard_path
   end
 
   private

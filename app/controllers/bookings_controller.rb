@@ -17,12 +17,20 @@ class BookingsController < ApplicationController
     respond_with(@booking)
   end
 
+  def approve
+    booking = Booking.find(params[:id])
+    booking.status = "approved"
+    booking.save
+    redirect_to dashboard_path
+  end
+
   def edit
   end
 
   def create
     x = params[:booking]["lesson_id"] + "_booking"
-    start_time = params[x]["start_time(1i)"] + "-" + params[x]["start_time(2i)"] + "-" + params[x]["start_time(3i)"] + " " + params[:booking]["time"] + ":00"
+    y = "_" + params[:booking]["lesson_id"]
+    start_time = params[x]["start_time(1i)"] + "-" + params[x]["start_time(2i)"] + "-" + params[x]["start_time(3i)"] + " " + params[:booking]["time"][y] + ":00"
     @booking = Booking.new(booking_params)
     @booking.start_time = start_time
     @booking.end_time = @booking.start_time + @booking.lesson.duration*60

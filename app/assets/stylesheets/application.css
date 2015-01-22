@@ -14,12 +14,22 @@
  *= require_self
  */
 
+ .dashboard_left{
+  float: left;
+  width: 50%;
+ }
+ .dashboard_right {
+  float: right;
+  width: 50%;
+ }
+
  .bookings_container{
   float: left;
   border: solid 5px orange;
   border-radius: 20px;
   padding: 15px;
-  min-width: 45%;
+  margin: 10px;
+  width: 90%;
  }
 
  .dashboard_container{
@@ -32,7 +42,16 @@
   border: solid 5px orange;
   border-radius: 20px;
   padding: 15px;
-  min-width: 45%;
+  margin: 10px;
+  width: 90%;
+}
+.dashboard_upcoming_bookings_container{
+  float: left;
+  border: solid 5px orange;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px;
+  width: 90%;
 }
 
 .booking_form{
@@ -68,4 +87,33 @@ nav a{
 footer {
   text-align: center;
 
+}
+table {
+  margin: 0 auto;
+  width: 60%;
+}
+.heading_container {
+  text-align: center;
+}
+#search_form {
+  text-align: center;
+}
+tr {
+  height: 50px;
+  padding: 20px;
+}
+td {
+  margin: 10px;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+.container h2{
+  text-align: center;
+}
+#conversation_form {
+  text-align: center;
+  margin: 0 auto;
 }
