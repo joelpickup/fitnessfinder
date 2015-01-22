@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   # def index
   #   if params[:search]
   #     @users

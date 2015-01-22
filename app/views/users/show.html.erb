@@ -1,3 +1,4 @@
+
 <p>Profile Photo:</p>
 <%= image_tag(@user.avatar) %>
 <p><strong>First Name: </strong><%= @user.first_name %></p>
@@ -16,7 +17,7 @@ Dislikes: <%= @user.get_dislikes.count %>
     <p><%= comment.comment %></p>
     <% end %>
   </div>
-<%= render partial: "comment_form" %>
+  <%= render partial: "comment_form" %>
 </div>
 
 <% if @user.role == "instructor" %>

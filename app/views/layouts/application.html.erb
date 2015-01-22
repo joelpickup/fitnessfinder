@@ -8,40 +8,63 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
- <!--  // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
- // <script src="js/bootstrap.js"></script> -->
 
 </head>
 
 <body>
 
-<nav class="navbar navbar-default" data-topbar role="navigation">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
-  <%= bootstrap_flash %>
+  <nav class="navbar navbar-default navbar-static-top" data-topbar role="navigation">
+    <!-- <div class="navbar-header"> -->
+    <div class = "container">
 
-  <div class='login'>
-      <% if current_user %>
-        <%= current_user.email %>
-        <%= link_to "Dashboard", dashboard_path %>
-        <%= link_to "Find Instructor", find_instructor_path %>
-        <%= link_to "My Messages", my_messages_path %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-        <%= link_to "Edit", edit_user_registration_path %>
-      <% else %>
-        <%= link_to "Sign In", new_user_session_path %>
-        <%= link_to "Register", new_user_registration_path %>
-        or
-        <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-      
-      <% end %>
+      <a href ="#" class = "navbar-brand">Fitness App</a>
+
+      <button class= "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+     </button>
+      <div class ="collapse navbar-collapse navHeaderCollapse">
+
+        <ul class= "nav navbar-nav navbar-right">
+
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+
+          <%= bootstrap_flash %>
+          <div class='login'>
+            <% if current_user %>
+            <%= current_user.first_name %>
+            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "My profile", dashboard_path, :class => "nav_button"  %></li></button>
+            
+            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "My Messages", my_messages_path, :class => "nav_button" %></li></button>
+            
+            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Find Instructor", find_instructor_path, :class => "nav_button"  %></li></button>
+            
+            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Dashboard", dashboard_path,  :class => "nav_button" %></li></button>
+
+            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Dashboard", dashboard_path,  :class => "nav_button" %></li></button>
+                   
+            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Log out", destroy_user_session_path,  :class => "nav_button", method: :delete %></li></button>
+
+            
+            <% else %>
+            
+            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Sign In", new_user_session_path, :class => "nav_button" %></li></button>
+
+            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Register", new_user_registration_path, :class => "nav_button" %></li></button>
+
+            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), :class => "nav_button" %></li></button>
+            
+          </ul>
+          <% end %>
+        </div>
     </div>
-    </nav>
-    <main>
-  <%= yield %>
+  </nav>
 
-</main>
+  <%= yield %>
   <footer class="row">
     <nav class= "navbar-fixed-bottom" >&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
   </footer>

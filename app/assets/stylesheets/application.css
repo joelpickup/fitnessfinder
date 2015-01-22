@@ -14,6 +14,7 @@
  *= require_self
  */
 
+
  .dashboard_left{
   float: left;
   width: 50%;
@@ -54,7 +55,12 @@
   width: 90%;
 }
 
-.booking_form{
+
+.nav_button{
+  color: white;
+}
+ .booking_form{
+
   display: none;
 }
 #add_lesson_form{
@@ -67,9 +73,25 @@ header {
  background: #DF6C07;
 }
 
-.navbar-default{
-  background: #DF6C07;
+.btn {
+    border-radius: 0px;
+    outline-color: #FF9800;
+    background-color: #000000;
+    border-color:#FF9800;
+}
 
+.navbar-default{
+  background: #000000;
+}
+
+.navbar-default .navbar-brand{
+  color: #FF9800;
+  font-size: 40px;
+  margin-top:25px; 
+}
+
+b{
+  color:#FFFFFF;
 }
 
 .col-sm-9{
@@ -77,13 +99,12 @@ header {
   font-size: 20px;
 }
 
-h2,
+
 h3{
-  color:#000000;
+  color:#FF9800;
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-nav a{
-}
+
 footer {
   text-align: center;
 
@@ -106,10 +127,10 @@ td {
   margin: 10px;
 }
 
-.container {
+/*.container {
   width: 500px;
   margin: 0 auto;
-}
+}*/
 .container h2{
   text-align: center;
 }
