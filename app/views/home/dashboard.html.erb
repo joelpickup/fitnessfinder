@@ -1,21 +1,30 @@
-<% if current_user.role == "instructor" %>
-<% current_user.lessons.each do |lesson| %>
-<strong><%= lesson.name %></strong><br>
-<%= lesson.description %><br>
-Delete<br>
-<% end %>
-<button class="lesson_button">Add Lesson</button>
-<div id="add_lesson_form">
-  <%= render partial: "lesson_form"%>
+<div class="dashboard_container">
+  <section class="bookings_container">
+    <h2>Upcoming Lessons</h2>
+    <% if !@upcoming_lessons.empty? %>
+    <%= render @upcoming_lessons %>
+    <% else %>
+    <h3>No upcoming lessons.</h3>
+    <% end %>
+    <h2>Past Lessons</h2>
+    <% if !@past_lessons.empty? %>
+    <%= render @past_lessons %>
+    <% else %>
+    <h3>No upcoming lessons.</h3>
+    <% end %>
+  </section>
+  <% if current_user.role == "instructor" %>
+  <aside class="dashboard_lessons_container">
+    <h2>My Lessons</h2>
+    <% current_user.lessons.each do |lesson| %>
+    <strong><%= lesson.name %></strong><br>
+    <%= lesson.description %><br>
+    Delete<br>
+    <% end %>
+    <button class="lesson_button">Add Lesson</button>
+    <div id="add_lesson_form">
+      <%= render "lesson_form"%>
+    </div>
+  </aside>
+  <% end %>
 </div>
-<% end %>
-
-<h2>Upcoming Lessons</h2>
-<% @upcoming_lessons.each do |booking| %>
-<%= render booking %>
-<% end %>
-<h2>Past Lessons</h2>
-<% @past_lessons.each do |booking| %>
-<%= render booking %>
-<% end %>
-
