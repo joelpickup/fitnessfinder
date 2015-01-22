@@ -1,39 +1,44 @@
+<div class="profile_container">
+  <div class="profile_left">
+    <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+    <%= image_tag @user.avatar, :class => "avatar" %>
+    <p><strong>Role: </strong><%= @user.role %></p><br>
+    <a href="/users/<%= @user.id %>/like" class="vote">&#9757;</a>
+    <a href="/users/<%= @user.id %>/dislike" class="vote">&#9759;</a><br>
+    Likes: <%= @user.get_likes.count %>
+    Dislikes: <%= @user.get_dislikes.count %>
+    <div class="comments_container">
+      <h3>Recent Comments</h3>
+      <div id="comments_list"> 
+        <% @user.comments.each do |comment| %>
+        <p><a href="/profiles/<%= comment.user.id %>"><strong><%= comment.user.first_name %></strong></a></p>
+        <p><%= comment.comment %></p>
+        <% end %>
+      </div>
+      <%= render partial: "comment_form" %>
+    </div>
+  </div>
+  <div class="profile_right">
+    <% if @user.role == "instructor" %>
 
-<p>Profile Photo:</p>
-<%= image_tag(@user.avatar) %>
-<p><strong>First Name: </strong><%= @user.first_name %></p>
-<p><strong>Surname: </strong><%= @user.last_name %></p>
-<p><strong>Role: </strong><%= @user.role %></p>
-Likes: <%= @user.get_likes.count %>
-Dislikes: <%= @user.get_dislikes.count %>
-<%= button_to "like", like_user_path(@user)%>
-<%= button_to "dislike", dislike_user_path(@user)%>
-<div class="comments_container">
-  <h2>Recent Comments</h2>
-  <div id="comments_list"> 
-    <% @user.comments.each do |comment| %>
-    <p><%= comment.user.first_name %></p>
-    <p><strong><%= comment.title %></strong></p>
-    <p><%= comment.comment %></p>
+    <div class="lessons_container">
+      <h3>Lessons</h3>
+      <% @user.lessons.each do |lesson| %>
+      <p><strong><%= lesson.name %></strong></p>
+      <p><%= lesson.description %></p>
+      <button class="book_button" id="show_booking_form_<%= lesson.id %>">Book!</button>
+      <div id="booking_form_<%= lesson.id %>" class="booking_form">
+        <%= render partial: "booking_form", :locals => {:lesson => lesson } %>
+      </div>
+      <% end %>
+    </div>
+
     <% end %>
+    
   </div>
-  <%= render partial: "comment_form" %>
+
+
+
+
 </div>
-
-<% if @user.role == "instructor" %>
-
-<div class="lessons_container">
-  <h2>Lessons</h2>
-  <% @user.lessons.each do |lesson| %>
-  <p><strong><%= lesson.name %></strong></p>
-  <p><%= lesson.description %></p>
-  <button class="book_button" id="show_booking_form_<%= lesson.id %>">Book!</button>
-  <div id="booking_form_<%= lesson.id %>" class="booking_form">
-    <%= render partial: "booking_form", :locals => {:lesson => lesson } %>
-  </div>
-  <% end %>
-</div>
-
-<% end %>
-
 

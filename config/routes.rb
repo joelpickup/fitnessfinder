@@ -26,8 +26,8 @@ Rails.application.routes.draw do
     resources :comments
     resources :lessons
     member do
-      post "like", to: "votes#upvote"
-      post "dislike", to: "votes#downvote"
+      get "like", to: "votes#upvote"
+      get "dislike", to: "votes#downvote"
     end
   end
   

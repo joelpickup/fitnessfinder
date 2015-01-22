@@ -14,6 +14,19 @@
  *= require_self
  */
 
+ .avatar{
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 2px solid orange;
+  border-radius: 10px;
+ }
+
+ .vote{
+  font-size: 5em;
+  color: orange;
+ }
+
 
  .dashboard_left{
   float: left;
@@ -22,6 +35,15 @@
  .dashboard_right {
   float: right;
   width: 50%;
+ }
+ .profile_left{
+  margin-left: 150px;
+  float: left;
+  width: 40%;
+ }
+ .profile_right {
+  float: right;
+  width: 40%;
  }
 
  .bookings_container{
@@ -127,14 +149,17 @@ td {
   margin: 10px;
 }
 
-/*.container {
-  width: 500px;
-  margin: 0 auto;
-}*/
 .container h2{
   text-align: center;
 }
 #conversation_form {
   text-align: center;
   margin: 0 auto;
+}
+.conversation_container{
+  width: 500px;
+  margin: 0 auto;
+}
+.conversation_container h2{
+  text-align: center;
 }
