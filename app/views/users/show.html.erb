@@ -1,4 +1,4 @@
-<h1> MY PROFILE</h1>
+<div><h1> MY PROFILE</h1>
 
 Welcome back <%= current_user.first_name%> <br>
 <%= image_tag current_user.avatar %>
@@ -6,5 +6,5 @@ Welcome back <%= current_user.first_name%> <br>
 <%= link_to "Sign Out",destroy_user_session_path, method: :delete %>
 <%= link_to "Edit current user",  edit_user_registration_path %>
 <%=link_to "Show Classes ", lessons_path %>
-
+</div>
 

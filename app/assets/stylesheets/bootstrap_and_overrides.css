@@ -8,4 +8,6 @@
 
   .navbar-fixed-top{
     min-height: 150px;
+    position: relative;
+    margin:0;
   }
