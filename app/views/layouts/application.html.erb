@@ -16,13 +16,13 @@
 
   <nav class="navbar navbar-default navbar-static-top" data-topbar role="navigation">
     <!-- <div class="navbar-header"> -->
-    <div class = "container">
+    <div class="container">
 
-      <a href ="#" class = "navbar-brand">Fitness App</a>
+      <a href="#" class="navbar-brand"><%=image_tag("fitness_center-256.png")%>&nbsp;Fitness App</a>
 
-      <button class= "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+      <button class="navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 
-        <span class = "icon-bar"></span>
+        <span class="icon-bar"></span>
         <span class = "icon-bar"></span>
         <span class = "icon-bar"></span>
      </button>
@@ -43,8 +43,6 @@
             
             <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Find Instructor", find_instructor_path, :class => "nav_button"  %></li></button>
             
-            <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Dashboard", dashboard_path,  :class => "nav_button" %></li></button>
-
             <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Dashboard", dashboard_path,  :class => "nav_button" %></li></button>
                    
             <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Log out", destroy_user_session_path,  :class => "nav_button", method: :delete %></li></button>

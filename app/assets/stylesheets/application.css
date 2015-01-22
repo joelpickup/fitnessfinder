@@ -54,7 +54,14 @@
   margin: 10px;
   width: 90%;
 }
+.navbar-brand{
+text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff;
+}
 
+.navbar-brand img{
+  height:50px;
+  display: inline-block;
+}
 
 .nav_button{
   color: white;
@@ -103,6 +110,7 @@ b{
 h3{
   color:#FF9800;
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
 }
 
 footer {
