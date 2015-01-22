@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root to: "home#index"
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
+  get "profiles/:id", to: "users#show"
+
   get "users/show"
 
   # devise_scope :user do
