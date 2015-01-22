@@ -21,7 +21,7 @@ $(function(){
   if ($('.alert').length) {
     setTimeout(function() {
       $('.alert').slideToggle();
-    }, 3000);
+    }, 2000);
   }
 
   if ($('.navbar-brand').length) {
@@ -36,7 +36,7 @@ $(function(){
      $(this).addClass('animated pulse');
     });
     $('.btn').on('mouseout', function(e){
-     $(this).removeClass('animated pulse');
+     $(this).removClass('animated pulse');
     });
   }
 
