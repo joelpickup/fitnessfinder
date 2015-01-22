@@ -5,9 +5,15 @@ Rails.application.routes.draw do
   get 'profiles/:id' => 'users#show'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
+
   root to: "home#index"
 
   get 'dashboard' => 'home#dashboard'
+
+  get "profiles/:id", to: "users#show"
+
+  get "users/show"
+
 
 
 

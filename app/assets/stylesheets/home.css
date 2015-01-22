@@ -5,7 +5,28 @@
   padding-bottom: 300px;
 }*/
 
+/*body{
+  padding-top: 150px;
+}*/
+
 h1{
   font-size: 50px;
   color: #00ff00;
+
+}
+
+h2{
+  color:#00ff00;
+  font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+h4{
+  color:#DF6C07;
+  font-size: 20px;
+  text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 -1px white;
+}
+
+#myCarousel{
+/*  top: 100px;*/
 }

@@ -8,12 +8,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+ <!--  // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ // <script src="js/bootstrap.js"></script> -->
+
 </head>
 
 <body>
+
 <nav class="navbar navbar-default" data-topbar role="navigation">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+
+  <%= bootstrap_flash %>
 
   <div class='login'>
       <% if current_user %>
@@ -31,9 +37,8 @@
       <% end %>
     </div>
 
-
   <%= yield %>
-  
+
 
   <footer class="row">
     <nav class= "navbar-fixed-bottom" >&copy; FitnessApp & JuniorSenior are registered trademarks. 2015</nav>
