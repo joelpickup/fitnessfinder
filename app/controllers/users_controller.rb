@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-<<<<<<< HEAD
-=======
   # def index
   #   if params[:search]
   #     @users
