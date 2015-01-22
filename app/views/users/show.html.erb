@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <p>Profile Photo:</p>
 <%= image_tag(@user.avatar) %>
 <p><strong>First Name: </strong><%= @user.first_name %></p>
@@ -19,13 +19,7 @@ Dislikes: <%= @user.get_dislikes.count %>
   </div>
 <%= render partial: "comment_form" %>
 </div>
-=======
-<div><h1> MY PROFILE</h1>
->>>>>>> development
 
-</div>
-
-<<<<<<< HEAD
 <% if @user.role == "instructor" %>
 
 <div class="lessons_container">
@@ -41,10 +35,5 @@ Dislikes: <%= @user.get_dislikes.count %>
 </div>
 
 <% end %>
-=======
-<%= link_to "Sign Out",destroy_user_session_path, method: :delete %>
-<%= link_to "Edit current user",  edit_user_registration_path %>
-<%=link_to "Show Classes ", lessons_path %>
-</div>
->>>>>>> development
+
 

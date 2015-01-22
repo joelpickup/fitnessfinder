@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   get "users/show"
 
 
-
   get "profiles/:id", to: "users#show"
   post "profiles/:id", to: "users#show"
   get "my_messages", to: "messages#messages"
