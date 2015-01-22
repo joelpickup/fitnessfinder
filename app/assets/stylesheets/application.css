@@ -14,7 +14,9 @@
  *= require_self
  */
 
-
+.nav_button{
+  color: white;
+}
  .booking_form{
   display: none;
 }
@@ -28,9 +30,25 @@ header {
  background: #DF6C07;
 }
 
+.btn {
+    border-radius: 0px;
+    outline-color: #FF9800;
+    background-color: #000000;
+    border-color:#FF9800;
+}
+
 .navbar-default{
   background: #000000;
+}
 
+.navbar-default .navbar-brand{
+  color: #FF9800;
+  font-size: 40px;
+  margin-top:25px; 
+}
+
+b{
+  color:#FFFFFF;
 }
 
 .col-sm-9{
@@ -40,7 +58,7 @@ header {
 
 
 h3{
-  color:#DF6C07;
+  color:#FF9800;
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 

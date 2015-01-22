@@ -16,18 +16,22 @@ h1{
 }
 
 h2{
-  color:#FFAB00;
-  font-size: 40px;
+  color:#FF9800;
+  font-size: 30px;
   font-family:'Andada', serif;
   font-weight: bold;
   text-shadow: -1px 0 black, 0 -1px black, 1px 0 black, 0 -1px black;
 }
 
 h4{
-  color:#FFAB00;
+  color:#FF9800;
   font-family: 'Andada', serif;
   font-size: 20px;
   text-shadow: -1px 0 black, 0 -1px black, 1px 0 black, 0 -1px black;
+}
+
+.navbar{
+  margin-bottom: 0px;
 }
 
 
