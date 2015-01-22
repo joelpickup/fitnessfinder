@@ -31,14 +31,14 @@ $(function(){
     });
   }
 
-  if ($('.btn').length) {
-    $('.btn').on('mouseover', function(e){
-     $(this).addClass('animated pulse');
-    });
-    $('.btn').on('mouseout', function(e){
-     $(this).removClass('animated pulse');
-    });
-  }
+  // if ($('.btn').length) {
+  //   $('.btn').on('mouseover', function(e){
+  //    $(this).addClass('animated pulse');
+  //   });
+  //   $('.btn').on('mouseout', function(e){
+  //    $(this).removClass('animated pulse');
+  //   });
+  // }
 
   $('.book_button').on('click', function(){
     num = this.id.split("_").pop();

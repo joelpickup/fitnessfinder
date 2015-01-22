@@ -18,10 +18,10 @@
  /*                     VARIABLES                         */
  /*********************************************************/
 
-/* ORANGE: #FF9800 */
-/* font-family: 'Open Sans', sans-serif; */
+ /* ORANGE: #FF9800 */
+ /* font-family: 'Open Sans', sans-serif; */
 
-body {
+ body {
   background-color: #fff;
   color: #333;
   font-family: 'Open Sans', helvetica, sans-serif;
@@ -67,7 +67,7 @@ h4{
   font-weight: 700;
   padding: 0;
   text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff;
-  }
+}
 
 .navbar-default .navbar-brand{
   color: #FF9800;
@@ -79,43 +79,33 @@ h4{
   display: inline-block;
 }
 
- .nav_button{
-   color: white;
-   line-height: 0;
- }
+.nav_button{
+ color: white;
+ line-height: 0;
+}
 
- .navbar-default{
-   background: #000000;
- }
+.navbar-default{
+ background: #000000;
+}
 
- nav.navbar .navbar-collapse .nav > li > a {
+nav.navbar .navbar-collapse .nav > li > a {
   color: #FFF;
- }
+}
 
- nav.navbar .navbar-collapse .nav > li > a:hover {
+nav.navbar .navbar-collapse .nav > li > a:hover {
   background: #FF9800;
   color: black;
- }
+}
 
- .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border: none;
- }
-
-/*.navbar, .navbar-brand, .login {
-  height: 50px;
-  line-height: 50px;
-}*/
-
-/*.navbar-btn {
-  margin: 0 2px;
-}*/
-
+}
 
 @media screen and (max-width:767px) {
 
   .navHeaderCollapse {
    clear: both;
-  }
+ }
 
 }
 
@@ -123,28 +113,28 @@ h4{
 
   .navHeaderCollapse {
    clear: none !important;
-  }
+ }
 
 }
 
 
- /*********************************************************/
- /*                     ALERTS                            */
- /*********************************************************/
- 
- .alert {
+/*********************************************************/
+/*                     ALERTS                            */
+/*********************************************************/
+
+.alert {
   margin-bottom: 0;
   text-align: center;
   border-radius: 0;
- }
+}
 
- .alert-success {
+.alert-success {
   background-color: #FF9800;
   border-color: #FF9800;
   color: black;
- }
+}
 
- /*********************************************************/
+/*********************************************************/
 
 
 .dashboard_left{
@@ -154,15 +144,6 @@ h4{
 .dashboard_right {
   float: right;
   width: 50%;
-}
-
-.bookings_container{
-  float: left;
-  border: solid 5px orange;
-  border-radius: 20px;
-  padding: 15px;
-  margin: 10px;
-  width: 90%;
 }
 
 .dashboard_container{
@@ -187,6 +168,13 @@ h4{
   width: 90%;
 }
 
+.bookings_container{
+  float: left;
+  border: solid 5px black;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px;
+}
 
 .booking_form{
 
@@ -247,14 +235,10 @@ td {
   margin: 10px;
 }
 
-/*.container {
-  width: 500px;
+.container h2{
+  text-align: center;
+}
+#conversation_form {
+  text-align: center;
   margin: 0 auto;
-  }*/
-  .container h2{
-    text-align: center;
-  }
-  #conversation_form {
-    text-align: center;
-    margin: 0 auto;
-  }
+}
