@@ -17,6 +17,29 @@
 //= require turbolinks
 //= require_tree .
 $(function(){
+
+  if ($('.alert').length) {
+    setTimeout(function() {
+      $('.alert').slideToggle();
+    }, 2000);
+  }
+
+  if ($('.navbar-brand').length) {
+    $('.navbar-brand').on('mouseover', function(e){
+     // $(this).addClass('animated pulse');
+     $(this).addClass('animated shake');
+    });
+  }
+
+  // if ($('.btn').length) {
+  //   $('.btn').on('mouseover', function(e){
+  //    $(this).addClass('animated pulse');
+  //   });
+  //   $('.btn').on('mouseout', function(e){
+  //    $(this).removClass('animated pulse');
+  //   });
+  // }
+
   $('.book_button').on('click', function(){
     num = this.id.split("_").pop();
     string = "#booking_form_" + num;

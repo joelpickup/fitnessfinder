@@ -14,6 +14,7 @@
  *= require_self
  */
 
+<<<<<<< HEAD
  .avatar{
   width: 200px;
   height: 200px;
@@ -27,14 +28,123 @@
   color: orange;
  }
 
+=======
+ /*********************************************************/
+ /*                     VARIABLES                         */
+ /*********************************************************/
+>>>>>>> 7da095090a0a9692a30a2c7978a76169b64843a7
 
- .dashboard_left{
-  float: left;
-  width: 50%;
+ /* ORANGE: #FF9800 */
+ /* font-family: 'Open Sans', sans-serif; */
+
+ body {
+  background-color: #fff;
+  color: #333;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/*********************************************************/
+/*                     FONTS                             */
+/*********************************************************/
+
+h1 {
+  font-size: 50px;
+  color: #00ff00;
+}
+
+h2{
+  color:#FF9800;
+  font-size: 30px;
+  font-family:'Andada', serif;
+  font-weight: bold;
+  text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+}
+
+h3{
+  color:#000000;
+  font-family: 'Andada', serif;
+  font-size: 20px;
+  /*text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;*/
+  
+}
+
+
+h4{
+  color:#FF9800;
+  font-family: 'Andada', serif;
+  font-size: 20px;
+  text-shadow: -1px 0 black, 0 -1px black, 1px 0 black, 0 -1px black;
+}
+
+h5{
+  color:#000000;
+  font-family: 'Andada', serif;
+  font-size: 30px;
+
+}
+
+/*********************************************************/
+/*                     NAVBAR                            */
+/*********************************************************/
+
+.navbar {
+  margin-bottom: 0;
+  border: 0;
+  color: white;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  padding: 0;
+  text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff;
+}
+
+.navbar-default .navbar-brand{
+  color: #FF9800;
+  font-size: 30px; 
+}
+
+.navbar-brand img{
+  height: 50px;
+  display: inline-block;
+}
+
+.nav_button{
+ color: white;
+ line-height: 0;
+}
+
+.navbar-default{
+ background: #000000;
+}
+
+nav.navbar .navbar-collapse .nav > li > a {
+  color: #FFF;
+}
+
+nav.navbar .navbar-collapse .nav > li > a:hover {
+  background: #FF9800;
+  color: black;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: none;
+}
+
+@media screen and (max-width:767px) {
+
+  .navHeaderCollapse {
+   clear: both;
  }
- .dashboard_right {
-  float: right;
-  width: 50%;
+
+}
+
+@media screen and (min-width:767px) {
+
+  .navHeaderCollapse {
+   clear: none !important;
  }
  .profile_left{
   margin-left: 150px;
@@ -46,19 +156,41 @@
   width: 40%;
  }
 
- .bookings_container{
-  float: left;
-  border: solid 5px orange;
-  border-radius: 20px;
-  padding: 15px;
-  margin: 10px;
-  width: 90%;
- }
+}
 
- .dashboard_container{
+
+/*********************************************************/
+/*                     ALERTS                            */
+/*********************************************************/
+
+.alert {
+  margin-bottom: 0;
+  text-align: center;
+  border-radius: 0;
+}
+
+.alert-success {
+  background-color: #FF9800;
+  border-color: #FF9800;
+  color: black;
+}
+
+/*********************************************************/
+
+
+.dashboard_left{
+  float: left;
+  width: 50%;
+}
+.dashboard_right {
+  float: right;
+  width: 50%;
+}
+
+.dashboard_container{
   max-width: 65%;
   margin: 0 auto;
- }
+}
 
 .dashboard_lessons_container{
   float: right;
@@ -78,39 +210,39 @@
 }
 
 
-.nav_button{
-  color: white;
+/*********************************************************/
+/*                     BOOKING FORM                            */
+/*********************************************************/
+
+
+.bookings_container{
+  /*float: left;*/
+  /*border: solid 5px orange;*/
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px;
 }
- .booking_form{
+
+.booking_form{
 
   display: none;
 }
 #add_lesson_form{
   display: none;
 }
-body{
-  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
+
 header {
  background: #DF6C07;
 }
 
 .btn {
-    border-radius: 0px;
-    outline-color: #FF9800;
-    background-color: #000000;
-    border-color:#FF9800;
+  border-radius: 0px;
+  outline-color: #FF9800;
+  background-color: #000000;
+  border-color:#FF9800;
 }
 
-.navbar-default{
-  background: #000000;
-}
 
-.navbar-default .navbar-brand{
-  color: #FF9800;
-  font-size: 40px;
-  margin-top:25px; 
-}
 
 b{
   color:#FFFFFF;
@@ -120,12 +252,10 @@ b{
   text-align: right;
   font-size: 20px;
 }
-
-
-h3{
-  color:#FF9800;
-  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+.my-message{
+  position: inherit;
 }
+
 
 footer {
   text-align: center;
@@ -156,6 +286,7 @@ td {
   text-align: center;
   margin: 0 auto;
 }
+
 .conversation_container{
   width: 500px;
   margin: 0 auto;
