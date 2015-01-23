@@ -26,22 +26,24 @@
     </section>
 
   </div>
-  <div class="dashboard_right">
-    <% if current_user.role == "instructor" %>
-    <section class="dashboard_lessons_container">
-      <h2>My Lessons</h2>
-      <% current_user.lessons.each do |lesson| %>
-      <strong><%= lesson.name %></strong><br> 
-      <%= link_to 'delete', lesson_path(lesson), :method => :delete %> <%= link_to 'edit', edit_lesson_path(lesson) %> <br>
-      <%= lesson.description %><br>
-      
-      <% end %>
-      <button class="lesson_button">Add Lesson</button>
-      <div id="add_lesson_form">
-        <%= render "lesson_form"%>
-      </div>
-    </section>
-    <% end %>
-  </div>
 
+  <div class="jumbotron">
+    <div class="container">
+      <% if current_user.role == "instructor" %>
+      <section class="dashboard_lessons_container">
+        <h2>My Lessons</h2>
+        <% current_user.lessons.each do |lesson| %>
+        <strong><%= lesson.name %></strong><br> 
+        <%= link_to 'delete', lesson_path(lesson), :method => :delete %> <%= link_to 'edit', edit_lesson_path(lesson) %> <br>
+        <%= lesson.description %><br>
+
+        <% end %>
+        <button class="lesson_button">Add Lesson</button>
+        <div id="add_lesson_form">
+          <%= render "lesson_form"%>
+        </div>
+      </section>
+      <% end %>
+    </div>
+  </div>
 </div>
