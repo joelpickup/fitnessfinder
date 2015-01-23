@@ -3,6 +3,8 @@ class LessonsController < ApplicationController
 
   respond_to :html
 
+load_and_authorize_resource
+
   def index
     if params[:search]
       @lessons = Lesson.where("name like ?", "%#{params[:search]}%")

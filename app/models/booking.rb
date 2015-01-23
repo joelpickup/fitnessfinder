@@ -5,6 +5,7 @@ class Booking < ActiveRecord::Base
   validates :lesson_id, :instructor_id, :client_id, :start_time, presence: :true
   validate :instructor_and_client_must_be_different, on: :create
   validate :instructor_must_be_lesson_instructor, on: :create
+  validate :booking_cannot_be_in_the_passed, on: :create
 
   before_create :default_status
 
@@ -15,6 +16,12 @@ class Booking < ActiveRecord::Base
   def instructor_and_client_must_be_different
     if client_id == instructor_id
       errors.add(:client_id, "you cannot create a booking with yourself")
+    end
+  end
+
+  def booking_cannot_be_in_the_passed
+    if start_time < Time.now
+      errors.add(:start_time, " - you can't make a booking in the past!")
     end
   end
 

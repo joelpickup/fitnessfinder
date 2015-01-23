@@ -1,8 +1,15 @@
-<%= simple_form_for @lesson do |f| %>
-<%= hidden_field_tag("lesson[instructor_id]", current_user.id) %>
-<%= f.input :name %>
-<%= f.input :description %>
-<%= f.input :price %>
-Duration: <%= select_tag "lesson[duration]", options_for_select([ "15", "30","45","60","75","90"], "15") %><br>
-<%= f.button :submit %>
-<% end %>
+<%= form_for @lesson do |f| -%>
+  <%= hidden_field_tag("lesson[instructor_id]", current_user.id) %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :description %>:
+  <%= f.text_field :description %>
+  <br>
+  <%= f.label :price %>:
+  £<%= f.number_field :price %>
+  <br>
+  <%= f.label :duration %>:
+  <%= select_tag "lesson[duration]", options_for_select([ "15", "30","45","60","75","90"], "15") %> mins<br>
+  <%= button_tag "Create Lesson" %>
+<% end -%>

@@ -64,7 +64,7 @@
       user.first_name = auth.info.first_name   # assuming the user model has a name
       user.last_name = auth.info.last_name
       user.role = "client"
-      # user.image = auth.info.image # assuming the user model has an image
+      user.avatar = auth.info.image 
     end
   end
   def self.new_with_session(params, session)

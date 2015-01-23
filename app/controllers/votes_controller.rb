@@ -1,4 +1,5 @@
 class VotesController < ApplicationController
+  load_and_authorize_resource
   def upvote
     @user = User.find(params[:id])
     @user.liked_by current_user

@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
-
+  load_and_authorize_resource
   def index
     @bookings = Booking.all
     respond_with(@bookings)
@@ -24,6 +24,13 @@ class BookingsController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def cancel
+    booking = Booking.find(params[:id])
+    booking.delete
+    booking.save
+    redirect_to dashboard_path
+  end
+
   def edit
   end
 
@@ -35,7 +42,7 @@ class BookingsController < ApplicationController
     @booking.start_time = start_time
     @booking.end_time = @booking.start_time + @booking.lesson.duration*60
     @booking.save
-    respond_with(@booking)
+    redirect_to dashboard_path
   end
 
   def update

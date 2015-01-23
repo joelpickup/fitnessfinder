@@ -13,8 +13,11 @@
  *= require_tree .
  *= require_self
  */
+.edit_form_container{
+  width: 400px;
+  margin: 0 auto;
+}
 
-<<<<<<< HEAD
  .avatar{
   width: 200px;
   height: 200px;
@@ -28,11 +31,9 @@
   color: orange;
  }
 
-=======
  /*********************************************************/
  /*                     VARIABLES                         */
  /*********************************************************/
->>>>>>> 7da095090a0a9692a30a2c7978a76169b64843a7
 
  /* ORANGE: #FF9800 */
  /* font-family: 'Open Sans', sans-serif; */
@@ -177,36 +178,16 @@ nav.navbar .navbar-collapse .nav > li > a:hover {
 
 /*********************************************************/
 
-
-.dashboard_left{
-  float: left;
-  width: 50%;
-}
-.dashboard_right {
-  float: right;
-  width: 50%;
-}
-
-.dashboard_container{
-  max-width: 65%;
-  margin: 0 auto;
-}
-
-.dashboard_lessons_container{
-  float: right;
-  border: solid 5px orange;
-  border-radius: 20px;
+.upcoming_bookings, .My_lessons,.upcoming_sessions{
+  width: 500px;
+  margin: 20px auto;
+  border: 2px solid grey;
   padding: 15px;
-  margin: 10px;
-  width: 90%;
+  border-radius: 5px;
 }
-.dashboard_upcoming_bookings_container{
-  float: left;
-  border: solid 5px orange;
-  border-radius: 20px;
-  padding: 15px;
-  margin: 10px;
-  width: 90%;
+.dashboard_page_container h5{
+  text-align: center;
+  text-decoration: underline;
 }
 
 
@@ -278,31 +259,25 @@ tr {
 td {
   margin: 10px;
 }
-
-.container h2{
-  text-align: center;
-}
-#conversation_form {
-  text-align: center;
-  margin: 0 auto;
-}
-
 .conversation_container{
   width: 500px;
   margin: 0 auto;
 }
-.conversations_container{
-text-align: center;
-}
-.conversation_container h3{
+
+
+
+#conversation_form {
   text-align: center;
+  margin: 0 auto;
 }
 .conversations_page_container{
   width: 500px;
   margin: 0 auto;
   text-align: center;
 }
-.conversations_page_container h3{
+.conversations_page_container h5{
   text-align: center;
 }
-
+.conversations_form_container{
+  text-align: center;
+}

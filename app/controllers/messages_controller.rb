@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
 
+
   def messages
     @conversations = current_user.mailbox.conversations
     @conversation

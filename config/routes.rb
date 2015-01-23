@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "users/show"
 
   post 'booking/:id/approve', to: 'bookings#approve', :as =>"approve"
+  post 'booking/:id', to: "bookings#cancel", :as => "cancel"
 
   get "profiles/:id", to: "users#show"
   post "profiles/:id", to: "users#show"

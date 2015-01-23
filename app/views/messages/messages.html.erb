@@ -1,13 +1,15 @@
 <div class="conversations_page_container">
-  <div class="container">
-    <h5>Conversations</h5>
-      <button id="new_conversation">Start a Conversation</button>
-      <div class="conversation_form">
-        <%= render 'conversation_form' %>
-      </section>
-    </div>
-    <div class="conversations_container">
-      <%= render @conversations %>
-    </div>
+  <div class="conversations_form_container">
+  <h5>Conversations</h5>
+  <button id="new_conversation">Start a Conversation</button>
+  <div class="conversation_form">
+    <%= render 'conversation_form' %>
+  </div>
+  </div>
+<br>
+<br>
+<br>
+  <div class="conversations_container">
+    <%= render @conversations %>
   </div>
 </div>

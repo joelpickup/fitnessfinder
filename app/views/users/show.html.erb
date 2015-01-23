@@ -11,8 +11,10 @@
       <h3>Recent Comments</h3>
       <div id="comments_list"> 
         <% @user.comments.each do |comment| %>
-        <p><a href="/profiles/<%= comment.user.id %>"><strong><%= comment.user.first_name %></strong></a></p>
-        <p><%= comment.comment %></p>
+        <% if comment %>
+          <p><a href="/profiles/<%= comment.user_id %>"><strong><%= comment.user.first_name %></strong></a></p>
+          <p><%= comment.comment %></p>
+        <% end %>
         <% end %>
       </div>
       <%= render partial: "comment_form" %>
