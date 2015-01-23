@@ -160,7 +160,18 @@ td {
   width: 500px;
   margin: 0 auto;
 }
+.conversations_container{
+text-align: center;
+}
 .conversation_container h3{
+  text-align: center;
+}
+.conversations_page_container{
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.conversations_page_container h3{
   text-align: center;
 }
 
