@@ -10,20 +10,20 @@
       <% end %>
     </section>
     <% end %>
-  <section class="bookings_container">
-    <h2>Upcoming Sessions</h2>
-    <% if !@upcoming_lessons.empty? %>
-    <%= render @upcoming_lessons %>
-    <% else %>
-    <h3>No upcoming lessons.</h3>
-    <% end %>
-    <h2>Past Sessions</h2>
-    <% if !@past_lessons.empty? %>
-    <%= render @past_lessons %>
-    <% else %>
-    <h3>No upcoming lessons.</h3>
-    <% end %>
-  </section>
+    <section class="bookings_container">
+      <h5>Upcoming Sessions</h5>
+      <% if !@upcoming_lessons.empty? %>
+      <%= render @upcoming_lessons %>
+      <% else %>
+      <h3>No upcoming lessons.</h3>
+      <% end %>
+      <h5>Past Sessions</h5>
+      <% if !@past_lessons.empty? %>
+      <%= render @past_lessons %>
+      <% else %>
+      <h3>No upcoming lessons.</h3>
+      <% end %>
+    </section>
 
   </div>
   <div class="dashboard_right">

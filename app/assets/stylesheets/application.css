@@ -46,11 +46,26 @@ h2{
   text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
 }
 
+h3{
+  color:#000000;
+  font-family: 'Andada', serif;
+  font-size: 20px;
+  /*text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;*/
+}
+
+
 h4{
   color:#FF9800;
   font-family: 'Andada', serif;
   font-size: 20px;
   text-shadow: -1px 0 black, 0 -1px black, 1px 0 black, 0 -1px black;
+}
+
+h5{
+  color:#000000;
+  font-family: 'Andada', serif;
+  font-size: 30px;
+
 }
 
 /*********************************************************/
@@ -172,8 +187,8 @@ nav.navbar .navbar-collapse .nav > li > a:hover {
   float: left;
   border: solid 5px black;
   border-radius: 20px;
-  padding: 15px;
-  margin: 10px;
+  padding: 20px;
+  margin: 15px;
 }
 
 .booking_form{
@@ -205,13 +220,10 @@ b{
   text-align: right;
   font-size: 20px;
 }
-
-
-h3{
-  color:#FF9800;
-  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-  text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+.my-message{
+  position: inherit;
 }
+
 
 footer {
   text-align: center;
@@ -241,4 +253,8 @@ td {
 #conversation_form {
   text-align: center;
   margin: 0 auto;
+}
+.conversations_container{
+  margin: 0 auto; 
+  padding: 50px;
 }
